@@ -1,0 +1,40 @@
+name: Deploy naar Github Pages
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Haal code op
+        uses: actions/checkout@v4
+
+      - name: Node.js instellen
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Dependencies installeren
+        run: npm ci
+
+      - name: Project bouwen
+        run: npm run build
+
+      - name: Pages instellen
+        uses: actions/configure-pages@v5
+
+      - name: Build uploaden
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist
+
+      - name: Deployen
+        id: deployen
+        uses: actions/deploy-pages@v4
