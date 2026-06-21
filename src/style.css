@@ -1,0 +1,232 @@
+:root {
+  --mdc-theme-primary: #ffcb05;
+  --achtergrond: #1a1a2e;
+  --oppervlak: #16213e;
+  --tekst: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--achtergrond);
+  color: var(--tekst);
+  font-family: Roboto, Arial, sans-serif;
+}
+
+body.light-modus {
+  --achtergrond: #f5f5f5;
+  --oppervlak: #ed3333;
+  --tekst: #1a1a2e;
+}
+
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.pokemon-grid {
+  column-count: 2;
+  column-gap: 12px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 600px) {
+  .pokemon-grid {
+    column-count: 3;
+  }
+}
+
+@media (min-width: 900px) {
+  .pokemon-grid {
+    column-count: 5;
+  }
+}
+
+.mdc-image-list__item {
+  break-inside: avoid;
+  margin-bottom: 12px;
+  background-color: var(--oppervlak);
+  border-radius: 12px;
+  padding: 12px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.mdc-image-list__item img {
+  width: 96px;
+  height: 96px;
+  image-rendering: pixelated;
+}
+
+.pokemon-naam {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.mdc-top-app-bar {
+  background-color: var(--oppervlak);
+}
+
+.mdc-top-app-bar__title {
+  color: var(--mdc-theme-primary);
+  font-weight: 700;
+}
+
+.mdc-top-app-bar__action-item {
+  color: var(--tekst);
+  text-decoration: none;
+}
+
+body.sheet-open {
+  overflow: hidden;
+}
+
+.sheet {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: auto;
+  background-color: var(--oppervlak);
+  transition: transform 0.3s ease;
+  z-index: 6;
+}
+
+.sheet-uit-beeld {
+  transform: translateX(-100%);
+}
+
+.sheet-inhoud {
+  padding: 16px;
+  text-align: center;
+}
+
+.sheet-inhoud img.sprite {
+  width: 150px;
+  height: 150px;
+  image-rendering: pixelated;
+}
+
+.type-chip {
+  display: inline-block;
+  padding: 4px 12px;
+  margin: 4px;
+  border-radius: 16px;
+  background-color: var(--oppervlak);
+  font-size: 0.8rem;
+  text-transform: capitalize;
+}
+
+.stat-rij {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 6px 0;
+  text-align: left;
+}
+
+.stat-naam {
+  width: 130px;
+  font-size: 0.8rem;
+  text-transform: capitalize;
+  color: #aaaaaa;
+}
+
+.stat-balk-achtergrond {
+  flex: 1;
+  height: 10px;
+  background-color: #2a2a4a;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.stat-balk-vulling {
+  height: 100%;
+  background: linear-gradient(90deg, #ffcb05, #ff6b6b);
+}
+
+.evolutie-lijst {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.evolutie-item {
+  cursor: pointer;
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 0.8rem;
+}
+
+/* mijn instal banner */
+
+.install-banner {
+  position: fixed;
+  /* width: 150px; */
+  bottom: 16px;
+  left: 16px;
+  right: 16px;
+
+  background-color: var(--oppervlak);
+  border-radius: 12px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  z-index: 10;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.install-banner button {
+  background-color: #ffcb05;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+/* hambuger knop */
+
+.hamburger-knop {
+  display: none;
+}
+
+@media (max-width: 599px) {
+  .desktop-nav {
+    display: none;
+  }
+  .hamburger-knop {
+    display: inline-flex;
+  }
+}
+
+.mobiel-menu{
+  position: fixed;
+  top: 56px;
+  right: 0;
+  background-color: var(--oppervlak);
+  border-radius: 0 0 0 12px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  z-index: 7;
+  box-shadow: -2px 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.mobiel-menu a,
+.mobiel-menu button{
+  padding: 12px 16px;
+  text-align: left;
+}
