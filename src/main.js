@@ -7,5 +7,5 @@ import './style.css';
 createApp(App).use(createPinia()).use(router).mount('#app')
 
 if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/service-worker.js')
+    navigator.serviceWorker.register('/pokedex-pwa/service-worker.js')
 }
