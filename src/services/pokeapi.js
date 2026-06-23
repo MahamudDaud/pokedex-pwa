@@ -16,7 +16,7 @@ export async function haalAllePokemonOp() {
     const opgeslagenLijst = haalUitOpslag('alle_pokemon_namen')
     if (opgeslagenLijst) return opgeslagenLijst
 
-    const antwoord = await fetch(`${POKEAPI_BASIS_URL}/pokemon?limit=100000&offset=0`)
+    const antwoord = await fetch(`${POKEAPI_BASIS_URL}/pokemon?limit=100000`)
     const data = await antwoord.json()
 
     slaOpInOpslag('alle_pokemon_namen', data.results)

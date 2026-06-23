@@ -171,6 +171,13 @@ body.sheet-open {
   font-size: 0.8rem;
 }
 
+.evolutie-item img {
+  width: 96px;
+  height: 96px;
+  image-rendering: pixelated;
+  display: block;
+}
+
 /* mijn instal banner */
 
 .install-banner {
@@ -207,12 +214,13 @@ body.sheet-open {
   .desktop-nav {
     display: none;
   }
+
   .hamburger-knop {
     display: inline-flex;
   }
 }
 
-.mobiel-menu{
+.mobiel-menu {
   position: fixed;
   top: 56px;
   right: 0;
@@ -226,7 +234,7 @@ body.sheet-open {
 }
 
 .mobiel-menu a,
-.mobiel-menu button{
+.mobiel-menu button {
   padding: 12px 16px;
   text-align: left;
 }

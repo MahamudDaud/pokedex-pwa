@@ -11,9 +11,7 @@ const props = defineProps(
 const emit = defineEmits(['geopend'])
 
 function toonFallbackSprite(event) {
-    //zet event.target.src op de png-fallback URL
     event.target.src = `https://assets.pokemon.com/assets/cms2/img/pokedex/full/${String(props.id).padStart(3, '0')}.png`
-    //gebruik props.id en padStart(3, '0')
 }
 </script>
 

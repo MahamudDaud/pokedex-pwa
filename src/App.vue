@@ -53,9 +53,9 @@ onMounted(() => {
         </button>
       </section>
       <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
-  <button @click="mobielMenuOpen = !mobielMenuOpen"
-    class="material-icons mdc-top-app-bar__action-item mdc-icon-button hamburger-knop">menu</button>
-</section>
+        <button @click="mobielMenuOpen = !mobielMenuOpen"
+          class="material-icons mdc-top-app-bar__action-item mdc-icon-button hamburger-knop">menu</button>
+      </section>
     </div>
   </header>
   <nav v-if="mobielMenuOpen" class="mobiel-menu">
