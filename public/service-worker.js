@@ -1,9 +1,9 @@
 const CACHE_NAAM = 'pokedex-cache-v1';
 const BESTANDEN_OM_TE_CACHEN = [
-    '/',
-    '/index.html',
-    '/manifest.json',
-    '/offline.html',
+    '/pokedex-pwa/',
+    '/pokedex-pwa/index.html',
+    '/pokedex-pwa/manifest.json',
+    '/pokedex-pwa/offline.html',
 ]
 
 self.addEventListener('install', (event) => {
